@@ -646,6 +646,10 @@ html {
   margin-top: 1.5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .block {
   display: block;
 }
@@ -729,6 +733,14 @@ html {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
+.h-24 {
+  height: 6rem;
 }
 
 .w-1\/12 {
@@ -1046,6 +1058,10 @@ html {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pb-9 {
+  padding-bottom: 2.25rem;
 }
 
 .text-center {

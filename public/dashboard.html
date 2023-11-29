@@ -18,8 +18,9 @@
             <hr class="border-black w-full my-8">
             <a href="dashboard.html"
                 class="text-xl font-bold  py-4 rounded-full bg-primary w-full text-center">Dashboard</a>
-            <a href="#" class="text-xl py-4 rounded-full  w-full text-center hover:bg-primaryLight">Make a
-                Cooies</a>
+            <button id="open-modal-make-cooies"
+                class="text-xl py-4 rounded-full  w-full text-center hover:bg-primaryLight">Make a
+                Cooies</button>
             <a href="report.html" class="text-xl py-4 rounded-full  w-full text-center hover:bg-primaryLight">Report</a>
         </div>
         <a href="index.html" class="text-xl py-4 rounded-full  w-full text-center  hover:bg-primaryLight ">Log Out</a>
@@ -164,6 +165,52 @@
 
         </div>
     </section>
+
+    <!-- MODAL MAKE A COOIES START-->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen" id="modal-make-cooies">
+        <!--modal content-->
+        <div class="w-2/5 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold text-center">Make A Cooies</h1>
+            <p class="text-xl pt-4 pb-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                nostrum?</p>
+            <form action="#" class="w-full">
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl h-10">Name</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Cooies Name..."></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl h-10">Description</h4>
+                    <textarea type="text" class="bg-primaryLight w-full h-24 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Cooies Description..."></textarea>
+                </div>
+            </form>
+            <a href="make-cooies.html"
+                class="px-10 py-3 bg-black text-white w-fit rounded-full text-xl mt-6 mb-4 hover:bg-primaryLight hover:text-black hover:font-semibold">Make</a>
+        </div>
+    </div>
+    <!-- MODAL MAKE A COOIES END-->
+
+    <script>
+        // MODAL MAKE A COOIES
+        let modalMakeCooies = document.getElementById("modal-make-cooies");
+        let openModalMakeCooies = document.getElementById("open-modal-make-cooies");
+
+        openModalMakeCooies.onclick = function () {
+            modalMakeCooies.style.display = "block";
+        }
+        // CLOSE MODAL
+        window.onclick = function (event) {
+            if (event.target == modalMakeCooies) {
+                modalMakeCooies.style.display = "none";
+            }
+
+            if (event.target == modalMakeCooies) {
+                modalMakeCooies.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
