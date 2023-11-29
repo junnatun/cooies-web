@@ -15,21 +15,141 @@
             <p class="text-xl mb-10 px-20 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum,
                 ducimus sunt aperiam reprehenderit, molestias fuga facilis, commodi obcaecati culpa sapiente ratione.
             </p>
-            <a href="#"
-                class="px-6 py-3 bg-black text-white w-fit rounded-full text-xl mb-10 hover:bg-slate-200 hover:text-black hover:font-semibold">Take
+            <a href="take-cooies.html"
+                class="px-6 py-3 bg-black text-white w-fit rounded-full text-xl mb-10 hover:bg-primaryLight hover:text-black hover:font-semibold">Take
                 a Cooies</a>
             <hr class="border-black w-3/4">
             <p class="text-xl mt-10 mb-4">Are you a creator?</p>
-            <a href="#"
+            <button id="open-modal-signin"
                 class="text-base font-semibold px-4 py-1 border-2 w-fit rounded-full border-black mb-4 hover:bg-black hover:text-white">Sign
-                In</a>
-            <p class="text-base">Didn’t have an account? <span><a href="#" class="font-semibold text-base ">Sign
+                In</button>
+            <p class="text-base">Didn’t have an account? <span><a href="#" id="open-modal-signup"
+                        class="font-semibold text-base hover:underline">Sign
                         Up</a></span></p>
         </div>
         <div class="w-1/2 h-full flex items-center justify-center">
             <img src="/src/images/ill-landing.svg" alt="" width="80%">
         </div>
     </section>
+
+    <!-- MODAL SIGNIN START -->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen" id="modal-signin">
+        <!--modal content-->
+        <div class="w-2/5 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold">Sign In</h1>
+            <p class="text-lg pt-4 pb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                nostrum?</p>
+            <form action="#" class="w-full">
+                <div class="flex flex-col justify-between items-center">
+                    <h4 class="text-xl h-10">Email</h4>
+                    <input type="email" class="bg-primaryLight w-4/5 h-10 rounded-lg p-4 text-xl mb-4 text-center"
+                        placeholder="Your Email..."></input>
+                </div>
+                <div class="flex flex-col justify-between items-center">
+                    <h4 class="text-xl h-10">Password</h4>
+                    <input type="password" class="bg-primaryLight w-4/5  h-10 rounded-lg p-4 text-xl mb-4 text-center"
+                        placeholder="Your Password..."></input>
+                </div>
+
+            </form>
+            <a href="#"
+                class="px-10 py-3 bg-black text-white w-fit rounded-full text-xl mt-6 mb-4 hover:bg-primaryLight hover:text-black hover:font-semibold">Sign
+                In</a>
+            <p class="text-base">Didn’t have an account? <span><a href="#" id="open-modal-signup-nest"
+                        class="font-semibold text-base hover:underline">Sign
+                        Up</a></span></p>
+        </div>
+    </div>
+    <!-- MODAL SIGNIN END -->
+
+    <!-- MODAL SIGNUP START -->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen" id="modal-signup">
+        <!--modal content-->
+        <div class="w-2/5 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold">Sign Up</h1>
+            <p class="text-lg pt-4 pb-8 text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                nostrum?</p>
+            <form action="#" class="w-full">
+                <div class="flex flex-row justify-between items-center">
+                    <h4 class="text-xl h-10">Name</h4>
+                    <input type="text" class="bg-primaryLight w-[70%] h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Your Name..."></input>
+                </div>
+                <div class="flex flex-row justify-between items-center">
+                    <h4 class="text-xl h-10">Email</h4>
+                    <input type="email" class="bg-primaryLight w-[70%] h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Your Email..."></input>
+                </div>
+                <div class="flex flex-row justify-between items-center">
+                    <h4 class="text-xl h-10">Password</h4>
+                    <input type="password" class="bg-primaryLight w-[70%] h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Your Password..."></input>
+                </div>
+                <div class="flex flex-row justify-between items-center">
+                    <h4 class="text-xl h-10">Re-Password</h4>
+                    <input type="password" class="bg-primaryLight w-[70%] h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Your re-Password..."></input>
+                </div>
+            </form>
+            <a href="#"
+                class="px-10 py-3 bg-black text-white w-fit rounded-full text-xl mt-6 mb-4 hover:bg-primaryLight hover:text-black hover:font-semibold">Sign
+                Up</a>
+            <p class="text-base">Have an account? <span><a href="#" id="open-modal-signin-nest"
+                        class="font-semibold text-base hover:underline">Sign
+                        In</a></span></p>
+        </div>
+    </div>
+    <!-- MODAL SIGNUP END -->
+
+
+
+    <script>
+        // MODAL SIGNIN
+        let modalSignin = document.getElementById("modal-signin");
+        let openModalSignin = document.getElementById("open-modal-signin");
+
+        openModalSignin.onclick = function () {
+            modalSignin.style.display = "block";
+        }
+
+        // MODAL SIGNUP
+        let modalSignup = document.getElementById("modal-signup");
+        let openModalSignup = document.getElementById("open-modal-signup");
+
+        openModalSignup.onclick = function () {
+            modalSignup.style.display = "block";
+        }
+
+        // MODAL SIGNIN NEST
+        let openModalSigninNest = document.getElementById("open-modal-signin-nest");
+
+        openModalSigninNest.onclick = function () {
+            modalSignup.style.display = "none";
+            modalSignin.style.display = "block";
+        }
+
+        // MODAL SIGNUP
+        let openModalSignupNest = document.getElementById("open-modal-signup-nest");
+
+        openModalSignupNest.onclick = function () {
+            modalSignin.style.display = "none";
+            modalSignup.style.display = "block";
+        }
+
+
+        // CLOSE MODAL
+        window.onclick = function (event) {
+            if (event.target == modalSignin) {
+                modalSignin.style.display = "none";
+            }
+
+            if (event.target == modalSignup) {
+                modalSignup.style.display = "none";
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>

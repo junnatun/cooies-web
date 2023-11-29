@@ -15,8 +15,13 @@ module.exports = {
         white: "#FFFFFF",
         black: "#000000",
       },
+      backgroundImage: {
+        "que-bg": "url('/src/images/bg-questions.svg')",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
 
