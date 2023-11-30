@@ -17,9 +17,9 @@
             <p class="text-xl pt-2 font-poppins">Luffya</p>
             <hr class="border-black w-full my-8">
             <a href="dashboard.html"
-                class="text-xl font-bold  py-4 rounded-full bg-primary w-full text-center">Dashboard</a>
+                class="text-xl py-4 rounded-full  w-full text-center hover:bg-primaryLight">Dashboard</a>
             <button id="open-modal-make-cooies"
-                class="text-xl py-4 rounded-full  w-full text-center hover:bg-primaryLight">Make a
+                class="text-xl font-bold  py-4 rounded-full bg-primary w-full text-center">Make a
                 Cooies</button>
             <a href="report.html" class="text-xl py-4 rounded-full  w-full text-center hover:bg-primaryLight">Report</a>
         </div>
@@ -27,9 +27,15 @@
     </navbar>
     <!-- AKHIR NAVBARR -->
 
-    <section class="w-screen h-screen flex flex-row">
-        <div class="w-1/5 h-full"></div>
-        <div class="w-4/5 h-full flex flex-col px-16 py-12 ">
+    <!-- FLOATING BUTTON ADD QUESTION -->
+    <button id="open-modal-add-question"
+        class="fixed bottom-8 right-6 py-2 px-6 rounded-xl bg-black text-white text-xl hover:bg-primary hover:text-black hover:font-semibold hover:border-2 hover:border-black">
+        Add Question
+    </button>
+
+
+    <section class="flex flex-row">
+        <div class="ml-[20%] w-4/5 h-full flex flex-col px-16 py-12 ">
             <div class="flex flex-row w-full h-1/4 bg-primary rounded-xl p-4 mb-6">
                 <div class="flex flex-col w-5/6 h-full">
                     <p class="text-xl font-bold ">Lorem ipsum dolor</p>
@@ -40,27 +46,31 @@
                     </div>
                     <p>2 Oct, 2023</p>
                 </div>
-                <div class="flex flex-col w-1/6 h-full items-end justify-between">
-                    <a href="#"><img src="/src/icons/icon-edit.svg" alt=""></a>
-                    <a href="#" class="px-10 py-2 rounded-full bg-black text-center text-xl text-white">Save</a>
+                <div class="flex flex-col w-1/6 items-end justify-between">
+                    <a href="#" id="open-modal-edit-cooies-desc"><img src="/src/icons/icon-edit.svg" alt=""
+                            width="80%"></a>
+                    <a href="dashboard.html"
+                        class="px-10 py-2 rounded-full bg-black text-center text-xl text-white hover:bg-primaryLight hover:text-black">Save</a>
                 </div>
             </div>
 
-            <!-- BANNER SOAL -->
+            <!-- BANNER SOAL START -->
             <div class="w-full h-1/2 rounded-xl bg-primaryLight p-6 flex flex-col justify-between mb-4">
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between mb-8 items-center">
                     <p class="text-4xl font-medium">Question #1</p>
                     <div class="flex flex-row justify-between">
-                        <a href="#" class="px-2"><img src="/src/icons/icon-show.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-edit.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-delete.svg" alt=""></a>
+                        <a href="#" id="open-modal-show-question"><img src="/src/icons/icon-show.svg" alt=""
+                                width="80%"></a>
+                        <a href="#" id="open-modal-edit-question"><img src="/src/icons/icon-edit.svg" alt=""
+                                width="80%"></a>
+                        <a href="#"><img src="/src/icons/icon-delete.svg" alt="" width="80%"></a>
                     </div>
                 </div>
-                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                <p class="text-xl mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex...</p>
-                <div class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between mb-2">
                     <div class="flex flex-col">
                         <p class="text-xl font-bold flex flex-row items-center">Option A <img
                                 src="/src/icons/icon-checklist.svg" alt="" width="5%" class="mx-2">
@@ -84,167 +94,7 @@
                     </div>
                 </div>
             </div>
-            <!-- AKHIR BANNER SOAL -->
-
-            <!-- BANNER SOAL -->
-            <div class="w-full h-1/2 rounded-xl bg-primaryLight p-6 flex flex-col justify-between mb-4">
-                <div class="flex flex-row justify-between">
-                    <p class="text-4xl font-medium">Question #2</p>
-                    <div class="flex flex-row justify-between">
-                        <a href="#" class="px-2"><img src="/src/icons/icon-show.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-edit.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-delete.svg" alt=""></a>
-                    </div>
-                </div>
-                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex...</p>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option A <img
-                                src="/src/icons/icon-checklist.svg" alt="" width="5%" class="mx-2">
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option B</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option C
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option D</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-            </div>
-            <!-- AKHIR BANNER SOAL -->
-
-            <!-- BANNER SOAL -->
-            <div class="w-full h-1/2 rounded-xl bg-primaryLight p-6 flex flex-col justify-between mb-4">
-                <div class="flex flex-row justify-between">
-                    <p class="text-4xl font-medium">Question #3</p>
-                    <div class="flex flex-row justify-between">
-                        <a href="#" class="px-2"><img src="/src/icons/icon-show.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-edit.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-delete.svg" alt=""></a>
-                    </div>
-                </div>
-                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex...</p>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option A <img
-                                src="/src/icons/icon-checklist.svg" alt="" width="5%" class="mx-2">
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option B</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option C
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option D</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-            </div>
-            <!-- AKHIR BANNER SOAL -->
-
-            <!-- BANNER SOAL -->
-            <div class="w-full h-1/2 rounded-xl bg-primaryLight p-6 flex flex-col justify-between mb-4">
-                <div class="flex flex-row justify-between">
-                    <p class="text-4xl font-medium">Question #4</p>
-                    <div class="flex flex-row justify-between">
-                        <a href="#" class="px-2"><img src="/src/icons/icon-show.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-edit.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-delete.svg" alt=""></a>
-                    </div>
-                </div>
-                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex...</p>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option A <img
-                                src="/src/icons/icon-checklist.svg" alt="" width="5%" class="mx-2">
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option B</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option C
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option D</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-            </div>
-            <!-- AKHIR BANNER SOAL -->
-
-            <!-- BANNER SOAL -->
-            <div class="w-full h-1/2 rounded-xl bg-primaryLight p-6 flex flex-col justify-between mb-4">
-                <div class="flex flex-row justify-between">
-                    <p class="text-4xl font-medium">Question #5</p>
-                    <div class="flex flex-row justify-between">
-                        <a href="#" class="px-2"><img src="/src/icons/icon-show.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-edit.svg" alt=""></a>
-                        <a href="#" class="px-2"><img src="/src/icons/icon-delete.svg" alt=""></a>
-                    </div>
-                </div>
-                <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex...</p>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option A <img
-                                src="/src/icons/icon-checklist.svg" alt="" width="5%" class="mx-2">
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option B</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-                <div class="flex flex-row justify-between">
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option C
-                        </p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="text-xl font-bold flex flex-row items-center">Option D</p>
-                        <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
-                    </div>
-                </div>
-            </div>
-            <!-- AKHIR BANNER SOAL -->
+            <!-- BANNER SOAL END -->
 
         </div>
     </section>
@@ -274,6 +124,170 @@
     </div>
     <!-- MODAL MAKE A COOIES END-->
 
+    <!-- MODAL EDIT COOIES DESCRIPTION START-->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen"
+        id="modal-edit-cooies-desc">
+        <!--modal content-->
+        <div class="w-2/5 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold text-center">Edit Cooies</h1>
+            <form action="#" class="w-full">
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl h-10">Name</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Cooies Name..." value="Lorem ipsum"></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl h-10">Description</h4>
+                    <textarea type="text" class="bg-primaryLight w-full h-24 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Cooies Description...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, est!</textarea>
+                </div>
+            </form>
+            <a href="make-cooies.html"
+                class="px-10 py-3 bg-black text-white w-fit rounded-full text-xl mt-6 mb-4 hover:bg-primaryLight hover:text-black hover:font-semibold">Change</a>
+        </div>
+    </div>
+    <!-- MODAL EDIT COOIES DESCRIPTION END-->
+
+    <!-- MODAL SHOW QUESTION-->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen" id="modal-show-question">
+        <!--modal content-->
+        <div class="w-4/5 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col">
+
+            <div class="flex flex-row justify-between items-center mb-8">
+                <p class="text-4xl font-medium">Question #1</p>
+                <a href="make-cooies.html"><img src="/src/icons/icon-close.svg" alt="" width="70%"></a>
+
+            </div>
+            <p class="text-xl mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia modi ullam
+                voluptate
+                distinctio, perspiciatis fugit quisquam minus quas sed voluptatibus. Voluptatum eum cum consectetur
+                soluta quam nihil sunt dolores maiores ipsa libero vitae commodi nesciunt facere dolorem deleniti
+                voluptate, officia minima, tempore, consequuntur excepturi quos deserunt sit eos? Cumque accusamus unde
+                ad et dolor deleniti dicta animi, laudantium aut aspernatur possimus fugiat, soluta consectetur
+                asperiores eum neque veritatis dolore veniam. Nobis, quo. Deleniti hic facilis natus optio, atque
+                dolores amet laborum dolorem tenetur sint nemo quod quasi velit beatae cum commodi rerum in assumenda
+                quaerat ullam accusamus alias vitae autem.</p>
+            <div class="flex flex-row justify-between mb-8">
+                <div class="flex flex-col">
+                    <p class="text-xl font-bold flex flex-row items-center">Option A <img
+                            src="/src/icons/icon-checklist.svg" alt="" width="5%" class="mx-2">
+                    </p>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-xl font-bold flex flex-row items-center">Option B</p>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+            </div>
+            <div class="flex flex-row justify-between">
+                <div class="flex flex-col">
+                    <p class="text-xl font-bold flex flex-row items-center">Option C
+                    </p>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+                <div class="flex flex-col">
+                    <p class="text-xl font-bold flex flex-row items-center">Option D</p>
+                    <p class="text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL SHOW QUESTION END-->
+
+    <!-- MODAL ADD QUESTION START-->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen" id="modal-add-question">
+        <!--modal content-->
+        <div class="w-1/2 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold text-center">Add Question</h1>
+            <p class="text-xl pt-4 pb-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                nostrum?</p>
+            <form action="#" class="w-full mb-8">
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl h-10">Question</h4>
+                    <textarea type="text" class="bg-primaryLight w-full h-24 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Write a Question..."></textarea>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option A</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option A..."></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option B</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option B..."></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option C</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option C..."></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option D</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option D..."></input>
+                </div>
+            </form>
+            <div class="flex flex-row w-full justify-between">
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl">Score</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Question Score"></input>
+                </div>
+                <a href="make-cooies.html"
+                    class="px-10 py-3 bg-black text-white w-fit rounded-full text-xl mt-6 mb-4 hover:bg-primaryLight hover:text-black hover:font-semibold">Add</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- MODAL ADD QUESTION END-->
+
+    <!-- MODAL EDIT QUESTION START-->
+    <div class="fixed hidden inset-0 bg-black bg-opacity-50 overflow-y-auto h-screen w-screen" id="modal-edit-question">
+        <!--modal content-->
+        <div class="w-1/2 h-fit bg-white mx-auto my-20 rounded-2xl p-8 flex flex-col items-center">
+            <h1 class="text-4xl font-extrabold text-center">Edit Question</h1>
+            <form action="#" class="w-full mb-8">
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl h-10">Question</h4>
+                    <textarea type="text" class="bg-primaryLight w-full h-24 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Write a Question...">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa at amet vel quisquam, aliquid hic.</textarea>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option A</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option A..." value="Lorem ipsum dolor, sit amet"></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option B</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option B..." value="Lorem ipsum dolor, sit amet"></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option C</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option C..." value="Lorem ipsum dolor, sit amet"></input>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <h4 class="px-2 bg-black text-white rounded-full w-fit mb-2">Option D</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Wite option D..." value="Lorem ipsum dolor, sit amet"></input>
+                </div>
+            </form>
+            <div class="flex flex-row w-full justify-between">
+                <div class="flex flex-col justify-between">
+                    <h4 class="text-xl">Score</h4>
+                    <input type="text" class="bg-primaryLight w-full h-10 rounded-lg p-4 text-xl mb-4"
+                        placeholder="Question Score" value="25"></input>
+                </div>
+                <a href="make-cooies.html"
+                    class="px-10 py-3 bg-black text-white w-fit rounded-full text-xl mt-6 mb-4 hover:bg-primaryLight hover:text-black hover:font-semibold">Save</a>
+            </div>
+
+        </div>
+    </div>
+    <!-- MODAL EDIT QUESTION END-->
+
     <script>
         // MODAL MAKE A COOIES
         let modalMakeCooies = document.getElementById("modal-make-cooies");
@@ -282,14 +296,59 @@
         openModalMakeCooies.onclick = function () {
             modalMakeCooies.style.display = "block";
         }
+
+        // MODAL EDIT COOIES DESC
+        let modalEditCooiesDesc = document.getElementById("modal-edit-cooies-desc");
+        let openModalEditCooiesDesc = document.getElementById("open-modal-edit-cooies-desc");
+
+        openModalEditCooiesDesc.onclick = function () {
+            modalEditCooiesDesc.style.display = "block";
+        }
+
+        // MODAL SHOW QUESTION
+        let modalShowQuestion = document.getElementById("modal-show-question");
+        let openModalShowQuestion = document.getElementById("open-modal-show-question");
+
+        openModalShowQuestion.onclick = function () {
+            modalShowQuestion.style.display = "block";
+        }
+
+        // MODAL ADD QUESTION
+        let modalAddQuestion = document.getElementById("modal-add-question");
+        let openModalAddQuestion = document.getElementById("open-modal-add-question");
+
+        openModalAddQuestion.onclick = function () {
+            modalAddQuestion.style.display = "block";
+        }
+
+        // MODAL EDIT QUESTION
+        let modalEditQuestion = document.getElementById("modal-edit-question");
+        let openModalEditQuestion = document.getElementById("open-modal-edit-question");
+
+        openModalEditQuestion.onclick = function () {
+            modalEditQuestion.style.display = "block";
+        }
+
         // CLOSE MODAL
         window.onclick = function (event) {
             if (event.target == modalMakeCooies) {
                 modalMakeCooies.style.display = "none";
             }
 
-            if (event.target == modalMakeCooies) {
-                modalMakeCooies.style.display = "none";
+            if (event.target == modalShowQuestion) {
+                modalShowQuestion.style.display = "none";
+            }
+
+            if (event.target == modalAddQuestion) {
+                modalAddQuestion.style.display = "none";
+            }
+
+            if (event.target == modalEditCooiesDesc) {
+                modalEditCooiesDesc.style.display = "none";
+            }
+
+            if (event.target == modalEditQuestion) {
+                modalEditQuestion.style.display = "none";
             }
         }
     </script>

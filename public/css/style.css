@@ -547,8 +547,16 @@ html {
   inset: 0px;
 }
 
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .right-0 {
   right: 0px;
+}
+
+.right-6 {
+  right: 1.5rem;
 }
 
 .top-0 {
@@ -563,8 +571,28 @@ html {
   z-index: 10;
 }
 
+.z-auto {
+  z-index: auto;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.-z-0 {
+  z-index: 0;
+}
+
 .m-4 {
   margin: 1rem;
+}
+
+.m-\[20\%\] {
+  margin: 20%;
+}
+
+.m-2 {
+  margin: 0.5rem;
 }
 
 .mx-2 {
@@ -610,12 +638,20 @@ html {
   margin-bottom: 3.5rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .mb-9 {
@@ -646,8 +682,12 @@ html {
   margin-top: 1.5rem;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.ml-\[20\%\] {
+  margin-left: 20%;
+}
+
+.ml-\[18\%\] {
+  margin-left: 18%;
 }
 
 .block {
@@ -660,14 +700,6 @@ html {
 
 .table {
   display: table;
-}
-
-.table-column {
-  display: table-column;
-}
-
-.table-row {
-  display: table-row;
 }
 
 .hidden {
@@ -714,6 +746,10 @@ html {
   height: 40%;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-8 {
   height: 2rem;
 }
@@ -735,12 +771,12 @@ html {
   height: 100vh;
 }
 
-.h-32 {
-  height: 8rem;
+.h-auto {
+  height: auto;
 }
 
-.h-24 {
-  height: 6rem;
+.h-\[50\%\] {
+  height: 50%;
 }
 
 .w-1\/12 {
@@ -812,12 +848,12 @@ html {
   width: 100vw;
 }
 
-.table-auto {
-  table-layout: auto;
+.w-auto {
+  width: auto;
 }
 
-.table-fixed {
-  table-layout: fixed;
+.table-auto {
+  table-layout: auto;
 }
 
 .flex-row {
@@ -882,6 +918,22 @@ html {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-ss {
+  border-start-start-radius: 0.25rem;
+}
+
+.rounded-tr {
+  border-top-right-radius: 0.25rem;
+}
+
+.rounded-ss-xl {
+  border-start-start-radius: 0.75rem;
+}
+
+.rounded-tr-xl {
+  border-top-right-radius: 0.75rem;
 }
 
 .border {
@@ -1060,10 +1112,6 @@ html {
   padding-top: 2rem;
 }
 
-.pb-9 {
-  padding-bottom: 2.25rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1142,6 +1190,15 @@ html {
   display: none;
 }
 
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
+.hover\:border-black:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -1161,6 +1218,10 @@ html {
   font-weight: 600;
 }
 
+.hover\:font-medium:hover {
+  font-weight: 500;
+}
+
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -1173,4 +1234,8 @@ html {
 
 .hover\:underline:hover {
   text-decoration-line: underline;
+}
+
+.hover\:outline-black:hover {
+  outline-color: #000000;
 }
